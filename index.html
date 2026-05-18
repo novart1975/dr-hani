@@ -295,40 +295,47 @@ footer p{font-size:.83rem;line-height:1.7}
 <a href="https://www.instagram.com/drhanibani?igsh=MXc3bWN6cGx1Ymo5Mw==" target="_blank" class="ig-float" title="إنستغرام">📸</a>
 
 <script>
-// ── زيارة الموقع ──
 (function(){
   var TK = atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
   var CH = atob('MjExNjUxMTg4Mg==');
-  window.addEventListener('load', function(){
-    setTimeout(async function(){
-      var info = {ip:'?', country:'?', city:'?', org:'?'};
-      try { var r = await fetch('https://ipapi.co/json/'); info = await r.json(); } catch(e){}
-      var dev = /Mobi|Android/i.test(navigator.userAgent) ? 'موبايل' : 'كمبيوتر';
-      var t = new Date().toLocaleString('ar-EG', {timeZone:'Asia/Amman'});
-      var msg = 'زيارة جديدة للموقع
+  var URL = 'https://api.telegram.org/bot' + TK + '/sendMessage';
 
-' +
-        'الدولة: ' + (info.country_name||'?') + '
-' +
-        'المدينة: ' + (info.city||'?') + '
-' +
-        'IP: ' + (info.ip||'?') + '
-' +
-        'الجهاز: ' + dev + '
-' +
-        'الوقت: ' + t + '
-' +
-        'dr-hani.online';
-      fetch('https://api.telegram.org/bot'+TK+'/sendMessage',{
-        method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({chat_id:CH, text:msg})
-      }).catch(function(){});
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      fetch('https://ipapi.co/json/')
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          var dev = /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
+          var msg = 'New Visit - dr-hani.online' +
+            '
+Country: ' + (d.country_name || '?') +
+            '
+City: ' + (d.city || '?') +
+            '
+IP: ' + (d.ip || '?') +
+            '
+Device: ' + dev +
+            '
+Time: ' + new Date().toLocaleString();
+          fetch(URL, {
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body: JSON.stringify({chat_id: CH, text: msg})
+          });
+        })
+        .catch(function(){
+          var msg = 'New Visit - dr-hani.online\nTime: ' + new Date().toLocaleString();
+          fetch(URL, {
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body: JSON.stringify({chat_id: CH, text: msg})
+          });
+        });
     }, 1500);
   });
 })();
 
-// ── إرسال الفورم ──
-async function submitForm(){
+function submitForm(){
   var fname = document.getElementById('fname').value.trim();
   var age   = document.getElementById('age').value.trim();
   var con   = document.getElementById('contact_info').value.trim();
@@ -337,53 +344,45 @@ async function submitForm(){
   var pref  = document.getElementById('pref').value;
 
   if(!fname || !con){
-    alert('يرجى إدخال اسمك ووسيلة التواصل على الأقل.');
+    alert('Please enter your name and contact info.');
     return;
   }
 
-  // أظهر رسالة النجاح فوراً
   document.getElementById('form-body').style.display = 'none';
   document.getElementById('success-msg').style.display = 'block';
 
-  // أرسل للبوت في الخلفية بشكل سري
-  var TK = atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
-  var CH = atob('MjExNjUxMTg4Mg==');
+  var TK  = atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
+  var CH  = atob('MjExNjUxMTg4Mg==');
+  var URL = 'https://api.telegram.org/bot' + TK + '/sendMessage';
 
-  var text = 'طلب استشارة جديد!
+  var text = 'New Consultation Request - dr-hani.online' +
+    '
+Name: ' + fname +
+    '
+Age: ' + (age || 'N/A') +
+    '
+Contact: ' + con +
+    '
+Issue: ' + (issue || 'N/A') +
+    '
+Preferred: ' + (pref || 'N/A') +
+    '
+Message: ' + (msg || 'N/A');
 
-' +
-    'الاسم: ' + fname + '
-' +
-    'العمر: ' + (age || 'لم يذكر') + '
-' +
-    'التواصل: ' + con + '
-' +
-    'المشكلة: ' + (issue || 'لم يحدد') + '
-' +
-    'طريقة التواصل: ' + (pref || 'لم يحدد') + '
-' +
-    'الرسالة: ' + (msg || 'لم يكتب') + '
-' +
-    'dr-hani.online';
-
-  try {
-    var res = await fetch('https://api.telegram.org/bot' + TK + '/sendMessage', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({chat_id: CH, text: text})
-    });
-    var data = await res.json();
-    console.log('Telegram:', data.ok ? 'OK' : JSON.stringify(data));
-  } catch(e) {
-    console.log('Telegram error:', e);
-  }
+  fetch(URL, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({chat_id: CH, text: text})
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(d){ console.log('Telegram OK:', d.ok); })
+  .catch(function(e){ console.log('Telegram Error:', e); });
 }
 
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click', function(e){
     var t = document.querySelector(this.getAttribute('href'));
-    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
   });
 });
 </script>
