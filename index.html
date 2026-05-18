@@ -295,89 +295,28 @@ footer p{font-size:.83rem;line-height:1.7}
 
 <a href="https://www.instagram.com/drhanibani?igsh=MXc3bWN6cGx1Ymo5Mw==" target="_blank" class="ig-float" title="إنستغرام">📸</a>
 
+
 <script>
 (function(){
-  var TK = atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
-  var CH = atob('MjExNjUxMTg4Mg==');
-  var API = 'https://api.telegram.org/bot' + TK + '/sendMessage';
-
-  function tgSend(msg) {
-    fetch(API, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({chat_id: CH, text: msg})
-    }).then(function(r){ return r.json(); })
-      .then(function(d){ console.log('TG:', d.ok); })
-      .catch(function(e){ console.log('TG Error:', e); });
-  }
-
-  window.addEventListener('load', function(){
-    setTimeout(function(){
-      fetch('https://ipapi.co/json/')
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-          var dev = /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
-          var parts = ['New Visit - dr-hani.online'];
-          parts.push('Country: ' + (d.country_name || '?'));
-          parts.push('City: ' + (d.city || '?'));
-          parts.push('IP: ' + (d.ip || '?'));
-          parts.push('Device: ' + dev);
-          parts.push('Time: ' + new Date().toLocaleString());
-          tgSend(parts.join('
-'));
-        })
-        .catch(function(){
-          tgSend('New Visit - dr-hani.online
-Time: ' + new Date().toLocaleString());
-        });
-    }, 1500);
-  });
+  var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
+  var CH=atob('MjExNjUxMTg4Mg==');
+  var API='https://api.telegram.org/bot'+TK+'/sendMessage';
+  function send(m){fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:m})});}
+  window.addEventListener('load',function(){setTimeout(function(){send('New Visit - dr-hani.online\nTime: '+new Date().toLocaleString());},1500);});
 })();
-
 function submitForm(){
-  var fname = document.getElementById('fname').value.trim();
-  var age   = document.getElementById('age').value.trim();
-  var con   = document.getElementById('contact_info').value.trim();
-  var issue = document.getElementById('issue').value;
-  var msg   = document.getElementById('msg').value.trim();
-  var pref  = document.getElementById('pref').value;
-
-  if(!fname || !con){
-    alert('Please enter your name and contact info.');
-    return;
-  }
-
-  document.getElementById('form-body').style.display = 'none';
-  document.getElementById('success-msg').style.display = 'block';
-
-  var TK  = atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
-  var CH  = atob('MjExNjUxMTg4Mg==');
-  var API = 'https://api.telegram.org/bot' + TK + '/sendMessage';
-
-  var parts = ['New Consultation - dr-hani.online'];
-  parts.push('Name: ' + fname);
-  parts.push('Age: ' + (age || 'N/A'));
-  parts.push('Contact: ' + con);
-  parts.push('Issue: ' + (issue || 'N/A'));
-  parts.push('Preferred: ' + (pref || 'N/A'));
-  parts.push('Message: ' + (msg || 'N/A'));
-
-  fetch(API, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({chat_id: CH, text: parts.join('
-')})
-  }).then(function(r){ return r.json(); })
-    .then(function(d){ console.log('TG sent:', d.ok); })
-    .catch(function(e){ console.log('TG Error:', e); });
+  var f=document.getElementById('fname').value.trim();
+  var c=document.getElementById('contact_info').value.trim();
+  if(!f||!c){alert('Please enter name and contact.');return;}
+  document.getElementById('form-body').style.display='none';
+  document.getElementById('success-msg').style.display='block';
+  var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
+  var CH=atob('MjExNjUxMTg4Mg==');
+  var API='https://api.telegram.org/bot'+TK+'/sendMessage';
+  var m='New Consultation\nName:'+f+'\nAge:'+document.getElementById('age').value+'\nContact:'+c+'\nIssue:'+document.getElementById('issue').value+'\nMsg:'+document.getElementById('msg').value;
+  fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:m})});
 }
-
-document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click', function(e){
-    var t = document.querySelector(this.getAttribute('href'));
-    if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
-  });
-});
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
 </script>
 </body>
 </html>
