@@ -294,28 +294,9 @@ footer p{font-size:.83rem;line-height:1.7}
 </footer>
 
 <a href="https://www.instagram.com/drhanibani?igsh=MXc3bWN6cGx1Ymo5Mw==" target="_blank" class="ig-float" title="إنستغرام">📸</a>
-
-
 <script>
-(function(){
-  var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
-  var CH=atob('MjExNjUxMTg4Mg==');
-  var API='https://api.telegram.org/bot'+TK+'/sendMessage';
-  function send(m){fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:m})});}
-  window.addEventListener('load',function(){setTimeout(function(){send('New Visit - dr-hani.online\nTime: '+new Date().toLocaleString());},1500);});
-})();
-function submitForm(){
-  var f=document.getElementById('fname').value.trim();
-  var c=document.getElementById('contact_info').value.trim();
-  if(!f||!c){alert('Please enter name and contact.');return;}
-  document.getElementById('form-body').style.display='none';
-  document.getElementById('success-msg').style.display='block';
-  var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
-  var CH=atob('MjExNjUxMTg4Mg==');
-  var API='https://api.telegram.org/bot'+TK+'/sendMessage';
-  var m='New Consultation\nName:'+f+'\nAge:'+document.getElementById('age').value+'\nContact:'+c+'\nIssue:'+document.getElementById('issue').value+'\nMsg:'+document.getElementById('msg').value;
-  fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:m})});
-}
+(function(){var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');var CH=atob('MjExNjUxMTg4Mg==');var API='https://api.telegram.org/bot'+TK+'/sendMessage';function send(m){fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:m})}).catch(function(){});}window.addEventListener('load',function(){setTimeout(function(){send('New Visit - dr-hani.online - '+new Date().toLocaleString());},1500);});})();
+function submitForm(){var f=document.getElementById('fname').value.trim();var c=document.getElementById('contact_info').value.trim();if(!f||!c){alert('Please enter name and contact.');return;}document.getElementById('form-body').style.display='none';document.getElementById('success-msg').style.display='block';var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');var CH=atob('MjExNjUxMTg4Mg==');fetch('https://api.telegram.org/bot'+TK+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:'Consultation - dr-hani.online\nName:'+f+'\nContact:'+c+'\nIssue:'+document.getElementById('issue').value+'\nMsg:'+document.getElementById('msg').value})}).catch(function(){});}
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
 </script>
 </body>
