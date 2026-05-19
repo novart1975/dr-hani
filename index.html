@@ -293,67 +293,9 @@ footer p{font-size:.83rem;line-height:1.7}
 </footer>
 
 <a href="https://www.instagram.com/drhanibani?igsh=MXc3bWN6cGx1Ymo5Mw==" target="_blank" class="ig-float" title="إنستغرام">📸</a>
-
 <script>
-(function(){
-  var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
-  var CH=atob('MjExNjUxMTg4Mg==');
-  var API='https://api.telegram.org/bot'+TK+'/sendMessage';
-  function send(m){fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:m})}).catch(function(){});}
-  function getBrowser(){var u=navigator.userAgent;if(u.indexOf('Edg')>-1)return 'Edge';if(u.indexOf('Chrome')>-1)return 'Chrome';if(u.indexOf('Firefox')>-1)return 'Firefox';if(u.indexOf('Safari')>-1)return 'Safari';return 'Other';}
-  function getOS(){var u=navigator.userAgent;if(u.indexOf('Windows')>-1)return 'Windows';if(u.indexOf('iPhone')>-1)return 'iPhone';if(u.indexOf('Android')>-1)return 'Android';if(u.indexOf('Mac')>-1)return 'Mac';return 'Other';}
-  function getDevice(){return /Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop';}
-  window.addEventListener('load',function(){
-    setTimeout(function(){
-      fetch('https://ipapi.co/json/')
-        .then(function(r){return r.json();})
-        .then(function(d){
-          var lines=[
-            'New Visit - dr-hani.online',
-            '----------------------------',
-            'Country: '+(d.country_name||'?'),
-            'City: '+(d.city||'?'),
-            'IP: '+(d.ip||'?'),
-            'ISP: '+(d.org||'?'),
-            'Device: '+getDevice()+' | '+getOS(),
-            'Browser: '+getBrowser(),
-            'Time: '+new Date().toLocaleString()
-          ];
-          send(lines.join('
-'));
-        })
-        .catch(function(){send('New Visit - dr-hani.online
-'+new Date().toLocaleString());});
-    },1500);
-  });
-})();
-
-function submitForm(){
-  var fname=document.getElementById('fname').value.trim();
-  var age=document.getElementById('age').value.trim();
-  var con=document.getElementById('contact_info').value.trim();
-  var issue=document.getElementById('issue').value;
-  var msg=document.getElementById('msg').value.trim();
-  var pref=document.getElementById('pref').value;
-  if(!fname||!con){alert('Please enter name and contact.');return;}
-  document.getElementById('form-body').style.display='none';
-  document.getElementById('success-msg').style.display='block';
-  var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
-  var CH=atob('MjExNjUxMTg4Mg==');
-  var lines=[
-    'New Consultation - dr-hani.online',
-    '----------------------------',
-    'Name: '+fname,
-    'Age: '+(age||'N/A'),
-    'Contact: '+con,
-    'Issue: '+(issue||'N/A'),
-    'Preferred: '+(pref||'N/A'),
-    'Message: '+(msg||'N/A')
-  ];
-  fetch('https://api.telegram.org/bot'+TK+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:lines.join('
-')})}).catch(function(){});
-}
-
+(function(){var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');var CH=atob('MjExNjUxMTg4Mg==');var API='https://api.telegram.org/bot'+TK+'/sendMessage';function send(m){fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:m})}).catch(function(){});}function getBrowser(){var u=navigator.userAgent;if(u.indexOf('Edg')>-1)return 'Edge';if(u.indexOf('Chrome')>-1)return 'Chrome';if(u.indexOf('Firefox')>-1)return 'Firefox';if(u.indexOf('Safari')>-1)return 'Safari';return 'Other';}function getOS(){var u=navigator.userAgent;if(u.indexOf('Windows')>-1)return 'Windows';if(u.indexOf('iPhone')>-1)return 'iPhone';if(u.indexOf('Android')>-1)return 'Android';if(u.indexOf('Mac')>-1)return 'Mac';return 'Other';}function getDevice(){return /Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop';}window.addEventListener('load',function(){setTimeout(function(){fetch('https://ipapi.co/json/').then(function(r){return r.json();}).then(function(d){var lines=['New Visit - dr-hani.online','----------------------------','Country: '+(d.country_name||'?'),'City: '+(d.city||'?'),'IP: '+(d.ip||'?'),'ISP: '+(d.org||'?'),'Device: '+getDevice()+' | '+getOS(),'Browser: '+getBrowser(),'Time: '+new Date().toLocaleString()];send(lines.join('\n'));}).catch(function(){send('New Visit - dr-hani.online\n'+new Date().toLocaleString());});},1500);});})();
+function submitForm(){var fname=document.getElementById('fname').value.trim();var age=document.getElementById('age').value.trim();var con=document.getElementById('contact_info').value.trim();var issue=document.getElementById('issue').value;var msg=document.getElementById('msg').value.trim();var pref=document.getElementById('pref').value;if(!fname||!con){alert('Please enter name and contact.');return;}document.getElementById('form-body').style.display='none';document.getElementById('success-msg').style.display='block';var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');var CH=atob('MjExNjUxMTg4Mg==');var lines=['New Consultation - dr-hani.online','----------------------------','Name: '+fname,'Age: '+(age||'N/A'),'Contact: '+con,'Issue: '+(issue||'N/A'),'Preferred: '+(pref||'N/A'),'Message: '+(msg||'N/A')];fetch('https://api.telegram.org/bot'+TK+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:lines.join('\n')})}).catch(function(){});}
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
 </script>
 </body>
