@@ -266,6 +266,10 @@ footer p{font-size:.83rem;line-height:1.7}
               <select id="referral"><option value="">اختر...</option><option>توصية من شخص</option><option>محرك بحث (جوجل)</option><option>إنستغرام</option><option>إعلان</option><option>غير ذلك</option></select>
             </div>
           </div>
+          <div class="form-row">
+            <div class="form-group"><label>الوزن (كغ)</label><input type="number" id="weight" placeholder="مثال: 70"></div>
+            <div class="form-group"><label>الطول (سم)</label><input type="number" id="height" placeholder="مثال: 170"></div>
+          </div>
 
           <div class="fsec">٢. سبب المراجعة</div>
           <div class="form-group"><label>طبيعة المشكلة</label>
@@ -288,6 +292,24 @@ footer p{font-size:.83rem;line-height:1.7}
             <label class="chk"><input type="checkbox" class="sym" value="أفكار إيذاء النفس">أفكار إيذاء النفس</label>
           </div>
           <div class="safety-note">💛 <strong>إن كانت لديك أفكار بإيذاء نفسك وتحتاج مساعدة عاجلة الآن</strong>، لا تنتظر رد النموذج — يُرجى التواصل فوراً مع طوارئ بلدك أو أقرب شخص تثق به. طلبك هنا مهم وسنتواصل معك، لكن الحالات العاجلة تحتاج دعماً مباشراً.</div>
+
+          <div class="form-group" style="margin-top:1rem"><label>برأيك، ما سبب وجود هذه الأعراض؟ (اختياري)</label><input type="text" id="cause" placeholder="السبب الذي تراه وراء ما تشعر به..."></div>
+
+          <div class="fsec">أعراض جسدية مصاحبة (اختر ما ينطبق)</div>
+          <div class="chk-grid">
+            <label class="chk"><input type="checkbox" class="psym" value="تسارع نبضات القلب">تسارع نبضات القلب</label>
+            <label class="chk"><input type="checkbox" class="psym" value="كتمة في الصدر">كتمة في الصدر</label>
+            <label class="chk"><input type="checkbox" class="psym" value="ضيق تنفس">ضيق تنفس</label>
+            <label class="chk"><input type="checkbox" class="psym" value="تعرّق">تعرّق</label>
+            <label class="chk"><input type="checkbox" class="psym" value="برودة الأطراف">برودة الأطراف</label>
+            <label class="chk"><input type="checkbox" class="psym" value="رجفة">رجفة</label>
+            <label class="chk"><input type="checkbox" class="psym" value="دوخة">دوخة</label>
+            <label class="chk"><input type="checkbox" class="psym" value="وهج في الوجه">وهج في الوجه</label>
+            <label class="chk"><input type="checkbox" class="psym" value="تساقط الشعر">تساقط الشعر</label>
+            <label class="chk"><input type="checkbox" class="psym" value="شيب مبكر">شيب مبكر</label>
+            <label class="chk"><input type="checkbox" class="psym" value="أخرى">أخرى</label>
+          </div>
+          <div class="form-group" style="margin-top:.4rem"><label>تفاصيل "أخرى" (إن اخترتها)</label><input type="text" id="psym_other" placeholder="اذكر الأعراض الأخرى إن وُجدت"></div>
 
           <div class="fsec">٤. التاريخ النفسي والعلاجي السابق</div>
           <div class="form-row">
@@ -365,6 +387,7 @@ function submitForm(){
   var fname=g('fname'), con=g('contact_info');
   if(!fname||!con){alert('الرجاء إدخال الاسم ووسيلة التواصل.');return;}
   var syms=[];document.querySelectorAll('.sym:checked').forEach(function(c){syms.push(c.value);});
+  var psyms=[];document.querySelectorAll('.psym:checked').forEach(function(c){psyms.push(c.value);});
   document.getElementById('form-body').style.display='none';
   document.getElementById('success-msg').style.display='block';
   var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
@@ -374,6 +397,8 @@ function submitForm(){
     '----------------------------',
     'الاسم: '+fname,
     'العمر: '+(g('age')||'—'),
+    'الوزن: '+(g('weight')||'—')+' كغ',
+    'الطول: '+(g('height')||'—')+' سم',
     'الحالة الاجتماعية: '+(g('marital')||'—'),
     'الدولة: '+(g('country')||'—'),
     'العمل: '+(g('job')||'—'),
@@ -383,6 +408,10 @@ function submitForm(){
     'الرسالة: '+(g('msg')||'—'),
     '--- الأعراض الحالية ---',
     (syms.length?syms.join('، '):'لا يوجد'),
+    'رأي المريض بالسبب: '+(g('cause')||'—'),
+    '--- أعراض جسدية مصاحبة ---',
+    (psyms.length?psyms.join('، '):'لا يوجد'),
+    'تفاصيل أخرى: '+(g('psym_other')||'—'),
     '--- التاريخ النفسي السابق ---',
     'راجع طبيباً نفسياً: '+(g('prevpsych')||'—'),
     'أدوية نفسية سابقة: '+(g('pastmeds')||'—'),
