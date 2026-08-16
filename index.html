@@ -59,8 +59,8 @@ section{padding:88px 6%}
 .spec-head{text-align:center;margin-bottom:56px}
 .spec-head .sd{margin:0 auto}
 .spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
-.spec-card{background:var(--cream);border-radius:20px;padding:30px 22px;text-align:center;border:1px solid rgba(29,158,117,.1);transition:transform .22s,box-shadow .22s,border-color .22s}
-.spec-card:hover{transform:translateY(-7px);border-color:rgba(29,158,117,.35);box-shadow:0 14px 40px rgba(8,80,65,.1)}
+.spec-card{background:#ffffff;border-radius:20px;padding:30px 22px;text-align:center;border:2px solid rgba(29,158,117,.4);transition:transform .22s,box-shadow .22s,border-color .22s;box-shadow:0 4px 16px rgba(8,80,65,.08)}
+.spec-card:hover{transform:translateY(-7px);border-color:var(--teal-bright);box-shadow:0 14px 40px rgba(8,80,65,.15);background:var(--teal-pale)}
 .spec-icon{width:62px;height:62px;border-radius:16px;background:var(--t0);display:flex;align-items:center;justify-content:center;margin:0 auto 1.1rem;font-size:1.75rem}
 .spec-card h3{font-size:1rem;font-weight:700;color:var(--t8);margin-bottom:.45rem}
 .spec-card p{font-size:.82rem;color:var(--mu);line-height:1.7}
@@ -90,10 +90,10 @@ section{padding:88px 6%}
 .ci-icon{width:42px;height:42px;border-radius:12px;background:var(--t0);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
 .ci-text h4{font-size:.78rem;color:var(--mu);font-weight:400}
 .ci-text p{font-size:.9rem;font-weight:700;color:var(--t8)}
-.booking-form{background:var(--cream);border-radius:24px;padding:34px 30px;border:1px solid rgba(0,0,0,.06)}
+.booking-form{background:#ffffff;border-radius:24px;padding:34px 30px;border:1px solid rgba(0,0,0,.06)}
 .form-title{font-family:'Amiri',serif;font-size:1.35rem;color:var(--t8);margin-bottom:.3rem}
 .form-sub{font-size:.8rem;color:var(--mu);margin-bottom:1.8rem}
-.form-group{margin-bottom:1.1rem}
+.form-group{margin-bottom:1.1rem}.section-block{background:#f0faf6;border-radius:14px;padding:16px 18px;margin-bottom:1.2rem;border:1px solid rgba(29,158,117,.15)}
 .form-group label{display:block;font-size:.82rem;font-weight:700;color:var(--t8);margin-bottom:5px}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 15px;border:1.5px solid rgba(0,0,0,.1);border-radius:12px;font-family:'Tajawal',sans-serif;font-size:.93rem;background:#fff;color:var(--txt);transition:border-color .2s;direction:rtl;outline:none}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--t5)}
@@ -105,7 +105,7 @@ section{padding:88px 6%}
 .success-msg .ck{font-size:2.8rem;margin-bottom:.8rem}
 .success-msg h3{font-family:'Amiri',serif;font-size:1.35rem;color:var(--t8);margin-bottom:.4rem}
 .success-msg p{font-size:.87rem;color:var(--mu)}
-.fsec{margin:1.7rem 0 .8rem;padding-top:1.3rem;border-top:1px solid rgba(0,0,0,.08);font-family:'Amiri',serif;font-size:1.02rem;font-weight:700;color:var(--t6)}
+.fsec{margin:1.7rem 0 .8rem;padding:12px 16px;background:linear-gradient(135deg,#e8f5f0,#d4ede6);border-radius:10px;border-right:4px solid var(--teal-bright);font-family:'Amiri',serif;font-size:1.02rem;font-weight:700;color:var(--t8)}
 .fsec:first-of-type{border-top:none;padding-top:0;margin-top:.3rem}
 .chk-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;margin-bottom:.3rem}
 .chk{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--tm);cursor:pointer;padding:2px 0}
@@ -169,6 +169,131 @@ footer p{font-size:.83rem;line-height:1.7}
   </div>
 </section>
 
+<section id="contact">
+  <div class="sw">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>احجز استشارتك المجانية</h2>
+        <p>أرسل طلبك الآن وسيتواصل معك الدكتور هاني سليمان في أقرب وقت ممكن. جميع البيانات سرية تماماً.</p>
+        <div class="contact-items">
+          <a href="mailto:dr_hani@gmx.com" class="contact-item">
+            <div class="ci-icon">📧</div>
+            <div class="ci-text"><h4>البريد الإلكتروني</h4><p>dr_hani@gmx.com</p></div>
+          </a>
+          <div class="contact-item">
+            <div class="ci-icon">🕐</div>
+            <div class="ci-text"><h4>أوقات الاستجابة</h4><p>خلال 24 ساعة من الإرسال</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">🌍</div>
+            <div class="ci-text"><h4>يخدم المنطقة العربية</h4><p>متاح لجميع الدول العربية</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-form">
+        <div id="form-body">
+          <div class="form-title">نموذج الحجز والتقييم الأولي</div>
+          <p class="form-sub">جميع الحقول سرية ومحمية 🔒 — الحقول الإجبارية عليها (*)</p>
+
+          <div class="fsec">١. البيانات الشخصية</div>
+          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
+            <div class="form-group"><label>الاسم الأول *</label><input type="text" id="fname" placeholder="اسمك الأول"></div>
+            <div class="form-group"><label>العمر</label><input type="number" id="age" placeholder="عمرك"></div>
+          </div>
+          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
+            <div class="form-group"><label>الحالة الاجتماعية</label>
+              <select id="marital"><option value="">اختر...</option><option>أعزب/عزباء</option><option>متزوج/متزوجة</option><option>مطلق/مطلقة</option><option>أرمل/أرملة</option></select>
+            </div>
+            <div class="form-group"><label>الدولة</label><input type="text" id="country" placeholder="دولتك"></div>
+          </div>
+          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
+            <div class="form-group"><label>طبيعة العمل</label><input type="text" id="job" placeholder="طالب، موظف، ربة منزل..."></div>
+            <div class="form-group"><label>كيف وصلت إلينا؟</label>
+              <select id="referral"><option value="">اختر...</option><option>توصية من شخص</option><option>محرك بحث (جوجل)</option><option>إعلان</option><option>غير ذلك</option></select>
+            </div>
+          </div>
+
+          <div class="fsec">٢. سبب المراجعة</div>
+          <div class="form-group"><label>طبيعة المشكلة</label>
+            <select id="issue"><option value="">اختر من القائمة...</option><option>اكتئاب أو حزن مستمر</option><option>قلق وتوتر</option><option>أفكار مزعجة أو وسواس</option><option>اضطراب النوم</option><option>صدمة نفسية</option><option>مشاكل في العلاقات</option><option>غير ذلك / أريد التحدث فقط</option></select>
+          </div>
+          <div class="form-group"><label>رسالتك للدكتور (اختياري)</label><textarea id="msg" placeholder="شارك ما تريد، لا يوجد شيء خاطئ لقوله..."></textarea></div>
+
+          <div class="fsec">٣. الأعراض الحالية (اختر ما ينطبق)</div>
+          <div class="chk-grid">
+            <label class="chk"><input type="checkbox" class="sym" value="اضطراب النوم (أرق/نوم زائد)">اضطراب النوم</label>
+            <label class="chk"><input type="checkbox" class="sym" value="تغيّر الشهية أو الوزن">تغيّر الشهية أو الوزن</label>
+            <label class="chk"><input type="checkbox" class="sym" value="حزن مستمر / فقدان المتعة">حزن مستمر أو فقدان المتعة</label>
+            <label class="chk"><input type="checkbox" class="sym" value="قلق وتوتر">قلق وتوتر</label>
+            <label class="chk"><input type="checkbox" class="sym" value="نوبات هلع">نوبات هلع</label>
+            <label class="chk"><input type="checkbox" class="sym" value="وساوس / أفكار متكررة">وساوس وأفكار متكررة</label>
+            <label class="chk"><input type="checkbox" class="sym" value="صعوبة تركيز">صعوبة تركيز</label>
+            <label class="chk"><input type="checkbox" class="sym" value="فقدان طاقة / إرهاق">فقدان الطاقة</label>
+            <label class="chk"><input type="checkbox" class="sym" value="هلاوس سمعية/بصرية">هلاوس سمعية أو بصرية</label>
+            <label class="chk"><input type="checkbox" class="sym" value="أفكار غريبة / شك زائد">أفكار غريبة أو شك زائد</label>
+            <label class="chk"><input type="checkbox" class="sym" value="أفكار إيذاء النفس">أفكار إيذاء النفس</label>
+          </div>
+          <div class="safety-note">💛 <strong>إن كانت لديك أفكار بإيذاء نفسك وتحتاج مساعدة عاجلة الآن</strong>، لا تنتظر رد النموذج — يُرجى التواصل فوراً مع طوارئ بلدك أو أقرب شخص تثق به. طلبك هنا مهم وسنتواصل معك، لكن الحالات العاجلة تحتاج دعماً مباشراً.</div>
+
+          <div class="fsec">٤. التاريخ النفسي والعلاجي السابق</div>
+          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
+            <div class="form-group"><label>راجعت طبيباً نفسياً من قبل؟</label>
+              <select id="prevpsych"><option value="">اختر...</option><option>لا</option><option>نعم</option></select>
+            </div>
+            <div class="form-group"><label>أدوية نفسية سابقة</label><input type="text" id="pastmeds" placeholder="اذكرها إن وُجدت، أو لا"></div>
+          </div>
+
+          <div class="fsec">٥. التاريخ الطبي والأدوية</div>
+          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
+            <div class="form-group"><label>أمراض مزمنة (سكري، ضغط، غدة...)</label><input type="text" id="chronic" placeholder="اذكرها إن وُجدت، أو لا"></div>
+            <div class="form-group"><label>أدوية أو مكملات حالية</label><input type="text" id="meds" placeholder="اذكرها إن وُجدت، أو لا"></div>
+          </div>
+
+          <div class="fsec">٦. التاريخ العائلي</div>
+          <div class="form-group"><label>أمراض نفسية في العائلة</label><input type="text" id="family" placeholder="اكتئاب، فصام، ثنائي القطب، إدمان... أو لا"></div>
+
+          <div class="fsec">٧. نمط الحياة</div>
+          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
+            <div class="form-group"><label>هل أنت مدخن؟</label>
+              <select id="smoker"><option value="">اختر...</option><option>لا</option><option>نعم</option><option>سابقاً</option></select>
+            </div>
+            <div class="form-group"><label>مواد أخرى</label>
+              <select id="substances"><option value="">اختر...</option><option>لا</option><option>نعم</option></select>
+            </div>
+          </div>
+          <div class="form-group"><label>النشاط البدني</label>
+            <select id="activity"><option value="">اختر...</option><option>قليل / لا يوجد</option><option>متوسط</option><option>منتظم</option></select>
+          </div>
+
+          <div class="fsec">٨. خاص بالسيدات (اختياري)</div>
+          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
+            <div class="form-group"><label>حمل أو رضاعة حالياً؟</label>
+              <select id="pregnancy"><option value="">اختر / لا ينطبق</option><option>لا</option><option>حامل</option><option>مُرضعة</option></select>
+            </div>
+            <div class="form-group"><label>انتظام الدورة الشهرية</label>
+              <select id="menstrual"><option value="">اختر / لا ينطبق</option><option>منتظمة</option><option>غير منتظمة</option></select>
+            </div>
+          </div>
+
+          <div class="fsec">٩. بيانات التواصل</div>
+          <div class="form-group"><label>الإيميل *</label><input type="email" id="contact_info" placeholder="بريدك الإلكتروني للرد عليك"></div>
+
+          <button class="btn-gold" style="width:100%;font-size:1rem;padding:14px;margin-top:.6rem" onclick="submitForm()">إرسال طلب الاستشارة المجانية</button>
+          <p class="privacy-note">🔒 <strong>ضمان الخصوصية:</strong> لن تُشارك بياناتك مع أي جهة. الاستشارة مجانية بالكامل.</p>
+        </div>
+        <div class="success-msg" id="success-msg">
+          <div class="ck">✅</div>
+          <h3>تم استلام طلبك بنجاح!</h3>
+          <p>سيتواصل معك الدكتور هاني سليمان خلال 24 ساعة.<br>شكراً لثقتك 💚</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <section id="specialties">
   <div class="sw">
     <div class="spec-head">
@@ -218,128 +343,7 @@ footer p{font-size:.83rem;line-height:1.7}
   <a href="#contact" class="btn-white">ابدأ الآن — مجاناً</a>
 </div>
 
-<section id="contact">
-  <div class="sw">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h2>احجز استشارتك المجانية</h2>
-        <p>أرسل طلبك الآن وسيتواصل معك الدكتور هاني سليمان في أقرب وقت ممكن. جميع البيانات سرية تماماً.</p>
-        <div class="contact-items">
-          <a href="mailto:dr_hani@gmx.com" class="contact-item">
-            <div class="ci-icon">📧</div>
-            <div class="ci-text"><h4>البريد الإلكتروني</h4><p>dr_hani@gmx.com</p></div>
-          </a>
-          <div class="contact-item">
-            <div class="ci-icon">🕐</div>
-            <div class="ci-text"><h4>أوقات الاستجابة</h4><p>خلال 24 ساعة من الإرسال</p></div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-icon">🌍</div>
-            <div class="ci-text"><h4>يخدم المنطقة العربية</h4><p>متاح لجميع الدول العربية</p></div>
-          </div>
-        </div>
-      </div>
 
-      <div class="booking-form">
-        <div id="form-body">
-          <div class="form-title">نموذج الحجز والتقييم الأولي</div>
-          <p class="form-sub">جميع الحقول سرية ومحمية 🔒 — الحقول الإجبارية عليها (*)</p>
-
-          <div class="fsec">١. البيانات الشخصية</div>
-          <div class="form-row">
-            <div class="form-group"><label>الاسم الأول *</label><input type="text" id="fname" placeholder="اسمك الأول"></div>
-            <div class="form-group"><label>العمر</label><input type="number" id="age" placeholder="عمرك"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label>الحالة الاجتماعية</label>
-              <select id="marital"><option value="">اختر...</option><option>أعزب/عزباء</option><option>متزوج/متزوجة</option><option>مطلق/مطلقة</option><option>أرمل/أرملة</option></select>
-            </div>
-            <div class="form-group"><label>الدولة</label><input type="text" id="country" placeholder="دولتك"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label>طبيعة العمل</label><input type="text" id="job" placeholder="طالب، موظف، ربة منزل..."></div>
-            <div class="form-group"><label>كيف وصلت إلينا؟</label>
-              <select id="referral"><option value="">اختر...</option><option>توصية من شخص</option><option>محرك بحث (جوجل)</option><option>إعلان</option><option>غير ذلك</option></select>
-            </div>
-          </div>
-
-          <div class="fsec">٢. سبب المراجعة</div>
-          <div class="form-group"><label>طبيعة المشكلة</label>
-            <select id="issue"><option value="">اختر من القائمة...</option><option>اكتئاب أو حزن مستمر</option><option>قلق وتوتر</option><option>أفكار مزعجة أو وسواس</option><option>اضطراب النوم</option><option>صدمة نفسية</option><option>مشاكل في العلاقات</option><option>غير ذلك / أريد التحدث فقط</option></select>
-          </div>
-          <div class="form-group"><label>رسالتك للدكتور (اختياري)</label><textarea id="msg" placeholder="شارك ما تريد، لا يوجد شيء خاطئ لقوله..."></textarea></div>
-
-          <div class="fsec">٣. الأعراض الحالية (اختر ما ينطبق)</div>
-          <div class="chk-grid">
-            <label class="chk"><input type="checkbox" class="sym" value="اضطراب النوم (أرق/نوم زائد)">اضطراب النوم</label>
-            <label class="chk"><input type="checkbox" class="sym" value="تغيّر الشهية أو الوزن">تغيّر الشهية أو الوزن</label>
-            <label class="chk"><input type="checkbox" class="sym" value="حزن مستمر / فقدان المتعة">حزن مستمر أو فقدان المتعة</label>
-            <label class="chk"><input type="checkbox" class="sym" value="قلق وتوتر">قلق وتوتر</label>
-            <label class="chk"><input type="checkbox" class="sym" value="نوبات هلع">نوبات هلع</label>
-            <label class="chk"><input type="checkbox" class="sym" value="وساوس / أفكار متكررة">وساوس وأفكار متكررة</label>
-            <label class="chk"><input type="checkbox" class="sym" value="صعوبة تركيز">صعوبة تركيز</label>
-            <label class="chk"><input type="checkbox" class="sym" value="فقدان طاقة / إرهاق">فقدان الطاقة</label>
-            <label class="chk"><input type="checkbox" class="sym" value="هلاوس سمعية/بصرية">هلاوس سمعية أو بصرية</label>
-            <label class="chk"><input type="checkbox" class="sym" value="أفكار غريبة / شك زائد">أفكار غريبة أو شك زائد</label>
-            <label class="chk"><input type="checkbox" class="sym" value="أفكار إيذاء النفس">أفكار إيذاء النفس</label>
-          </div>
-          <div class="safety-note">💛 <strong>إن كانت لديك أفكار بإيذاء نفسك وتحتاج مساعدة عاجلة الآن</strong>، لا تنتظر رد النموذج — يُرجى التواصل فوراً مع طوارئ بلدك أو أقرب شخص تثق به. طلبك هنا مهم وسنتواصل معك، لكن الحالات العاجلة تحتاج دعماً مباشراً.</div>
-
-          <div class="fsec">٤. التاريخ النفسي والعلاجي السابق</div>
-          <div class="form-row">
-            <div class="form-group"><label>راجعت طبيباً نفسياً من قبل؟</label>
-              <select id="prevpsych"><option value="">اختر...</option><option>لا</option><option>نعم</option></select>
-            </div>
-            <div class="form-group"><label>أدوية نفسية سابقة</label><input type="text" id="pastmeds" placeholder="اذكرها إن وُجدت، أو لا"></div>
-          </div>
-
-          <div class="fsec">٥. التاريخ الطبي والأدوية</div>
-          <div class="form-row">
-            <div class="form-group"><label>أمراض مزمنة (سكري، ضغط، غدة...)</label><input type="text" id="chronic" placeholder="اذكرها إن وُجدت، أو لا"></div>
-            <div class="form-group"><label>أدوية أو مكملات حالية</label><input type="text" id="meds" placeholder="اذكرها إن وُجدت، أو لا"></div>
-          </div>
-
-          <div class="fsec">٦. التاريخ العائلي</div>
-          <div class="form-group"><label>أمراض نفسية في العائلة</label><input type="text" id="family" placeholder="اكتئاب، فصام، ثنائي القطب، إدمان... أو لا"></div>
-
-          <div class="fsec">٧. نمط الحياة</div>
-          <div class="form-row">
-            <div class="form-group"><label>هل أنت مدخن؟</label>
-              <select id="smoker"><option value="">اختر...</option><option>لا</option><option>نعم</option><option>سابقاً</option></select>
-            </div>
-            <div class="form-group"><label>مواد أخرى</label>
-              <select id="substances"><option value="">اختر...</option><option>لا</option><option>نعم</option></select>
-            </div>
-          </div>
-          <div class="form-group"><label>النشاط البدني</label>
-            <select id="activity"><option value="">اختر...</option><option>قليل / لا يوجد</option><option>متوسط</option><option>منتظم</option></select>
-          </div>
-
-          <div class="fsec">٨. خاص بالسيدات (اختياري)</div>
-          <div class="form-row">
-            <div class="form-group"><label>حمل أو رضاعة حالياً؟</label>
-              <select id="pregnancy"><option value="">اختر / لا ينطبق</option><option>لا</option><option>حامل</option><option>مُرضعة</option></select>
-            </div>
-            <div class="form-group"><label>انتظام الدورة الشهرية</label>
-              <select id="menstrual"><option value="">اختر / لا ينطبق</option><option>منتظمة</option><option>غير منتظمة</option></select>
-            </div>
-          </div>
-
-          <div class="fsec">٩. بيانات التواصل</div>
-          <div class="form-group"><label>الإيميل *</label><input type="email" id="contact_info" placeholder="بريدك الإلكتروني للرد عليك"></div>
-
-          <button class="btn-gold" style="width:100%;font-size:1rem;padding:14px;margin-top:.6rem" onclick="submitForm()">إرسال طلب الاستشارة المجانية</button>
-          <p class="privacy-note">🔒 <strong>ضمان الخصوصية:</strong> لن تُشارك بياناتك مع أي جهة. الاستشارة مجانية بالكامل.</p>
-        </div>
-        <div class="success-msg" id="success-msg">
-          <div class="ck">✅</div>
-          <h3>تم استلام طلبك بنجاح!</h3>
-          <p>سيتواصل معك الدكتور هاني سليمان خلال 24 ساعة.<br>شكراً لثقتك 💚</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer>
   <div class="foot-logo">د. هاني سليمان</div>
