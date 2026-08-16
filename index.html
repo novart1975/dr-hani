@@ -190,6 +190,10 @@ footer p{font-size:.83rem;line-height:1.7}
             <div class="form-group"><label>العمر</label><input type="number" id="age" placeholder="عمرك"></div>
           </div>
           <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
+            <div class="form-group"><label>الوزن (كغ)</label><input type="number" id="weight" placeholder="مثال: 70"></div>
+            <div class="form-group"><label>الطول (سم)</label><input type="number" id="height" placeholder="مثال: 170"></div>
+          </div>
+          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
             <div class="form-group"><label>الحالة الاجتماعية</label>
               <select id="marital"><option value="">اختر...</option><option>أعزب/عزباء</option><option>متزوج/متزوجة</option><option>مطلق/مطلقة</option><option>أرمل/أرملة</option></select>
             </div>
@@ -205,6 +209,15 @@ footer p{font-size:.83rem;line-height:1.7}
           <div class="fsec">٢. سبب المراجعة</div>
           <div class="form-group"><label>طبيعة المشكلة</label>
             <select id="issue"><option value="">اختر من القائمة...</option><option>اكتئاب أو حزن مستمر</option><option>قلق وتوتر</option><option>أفكار مزعجة أو وسواس</option><option>اضطراب النوم</option><option>صدمة نفسية</option><option>مشاكل في العلاقات</option><option>غير ذلك / أريد التحدث فقط</option></select>
+          </div>
+          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
+            <div class="form-group"><label>منذ متى تعاني من هذه المشكلة؟</label><input type="text" id="duration" placeholder="مثال: أسبوع، شهر، سنة..."></div>
+            <div class="form-group"><label>هل راجعت طبيباً نفسياً من قبل لهذه المشكلة؟</label><select id="prev_consult"><option value="">اختر...</option><option>لا</option><option>نعم واستمرت المشكلة</option><option>نعم وتحسنت ثم عادت</option></select></div>
+          </div>
+          <div class="form-group" style="background:linear-gradient(135deg,#fff8e1,#fff3cd);border:2px solid #f0c040;border-radius:14px;padding:16px;margin-bottom:1rem">
+            <label style="color:#8a6000;font-size:.9rem;font-weight:800">⭐ ما هو رأيك بسبب مشكلتك؟ (إجباري) *</label>
+            <textarea id="cause" placeholder="ما الذي تعتقد أنه سبب مشكلتك النفسية؟ شارك رأيك بصراحة..." style="min-height:90px;border:1.5px solid #f0c040;margin-top:6px" required></textarea>
+            <p style="font-size:.72rem;color:#8a6000;margin-top:4px">💡 رأيك مهم جداً للدكتور في التقييم الأولي</p>
           </div>
           <div class="form-group"><label>رسالتك للدكتور (اختياري)</label><textarea id="msg" placeholder="شارك ما تريد، لا يوجد شيء خاطئ لقوله..."></textarea></div>
 
@@ -223,6 +236,20 @@ footer p{font-size:.83rem;line-height:1.7}
             <label class="chk"><input type="checkbox" class="sym" value="أفكار إيذاء النفس">أفكار إيذاء النفس</label>
           </div>
           <div class="safety-note">💛 <strong>إن كانت لديك أفكار بإيذاء نفسك وتحتاج مساعدة عاجلة الآن</strong>، لا تنتظر رد النموذج — يُرجى التواصل فوراً مع طوارئ بلدك أو أقرب شخص تثق به. طلبك هنا مهم وسنتواصل معك، لكن الحالات العاجلة تحتاج دعماً مباشراً.</div>
+
+          <div class="fsec">٣ب. أعراض جسدية مصاحبة (اختر ما ينطبق)</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin-bottom:1rem;background:#f0faf6;padding:14px;border-radius:12px;border:1px solid rgba(29,158,117,.12)">
+            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="صداع">صداع</label>
+            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="ضيق تنفس">ضيق تنفس</label>
+            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="خفقان قلب">خفقان قلب</label>
+            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="آلام عضلية">آلام عضلية</label>
+            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="دوخة">دوخة</label>
+            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="غثيان">غثيان</label>
+            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="تعرق زائد">تعرق زائد</label>
+            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="آلام صدر">آلام صدر</label>
+            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="اضطراب هضمي">اضطراب هضمي</label>
+          </div>
+          <div class="form-group"><label>تفاصيل أخرى للأعراض الجسدية</label><input type="text" id="psym_other" placeholder="أي أعراض جسدية أخرى..."></div>
 
           <div class="fsec">٤. التاريخ النفسي والعلاجي السابق</div>
           <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
@@ -243,7 +270,8 @@ footer p{font-size:.83rem;line-height:1.7}
 
           <div class="fsec">٧. نمط الحياة</div>
           <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>هل أنت مدخن؟</label>
+            <div class="form-group"><label>ساعات النوم يومياً</label><select id="sleep"><option value="">اختر...</option><option>أقل من 5 ساعات</option><option>5-7 ساعات</option><option>7-9 ساعات</option><option>أكثر من 9 ساعات</option></select></div>
+          <div class="form-group"><label>هل أنت مدخن؟</label>
               <select id="smoker"><option value="">اختر...</option><option>لا</option><option>نعم</option><option>سابقاً</option></select>
             </div>
             <div class="form-group"><label>مواد أخرى</label>
