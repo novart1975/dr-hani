@@ -59,8 +59,8 @@ section{padding:88px 6%}
 .spec-head{text-align:center;margin-bottom:56px}
 .spec-head .sd{margin:0 auto}
 .spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
-.spec-card{background:#ffffff;border-radius:20px;padding:30px 22px;text-align:center;border:2px solid rgba(29,158,117,.4);transition:transform .22s,box-shadow .22s,border-color .22s;box-shadow:0 4px 16px rgba(8,80,65,.08)}
-.spec-card:hover{transform:translateY(-7px);border-color:var(--teal-bright);box-shadow:0 14px 40px rgba(8,80,65,.15);background:var(--teal-pale)}
+.spec-card{background:var(--cream);border-radius:20px;padding:30px 22px;text-align:center;border:1px solid rgba(29,158,117,.1);transition:transform .22s,box-shadow .22s,border-color .22s}
+.spec-card:hover{transform:translateY(-7px);border-color:rgba(29,158,117,.35);box-shadow:0 14px 40px rgba(8,80,65,.1)}
 .spec-icon{width:62px;height:62px;border-radius:16px;background:var(--t0);display:flex;align-items:center;justify-content:center;margin:0 auto 1.1rem;font-size:1.75rem}
 .spec-card h3{font-size:1rem;font-weight:700;color:var(--t8);margin-bottom:.45rem}
 .spec-card p{font-size:.82rem;color:var(--mu);line-height:1.7}
@@ -81,7 +81,7 @@ section{padding:88px 6%}
 .free-banner p{font-size:.97rem;color:rgba(255,255,255,.85);max-width:480px;margin:0 auto 2.2rem;line-height:1.8}
 .btn-white{background:#fff;color:#7A5500;padding:14px 40px;border-radius:50px;font-size:1rem;font-weight:700;font-family:'Tajawal',sans-serif;text-decoration:none;border:none;cursor:pointer;display:inline-block}
 #contact{background:var(--white)}
-.contact-grid{display:block;max-width:880px;margin:0 auto}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .contact-info h2{font-family:'Amiri',serif;font-size:2rem;color:var(--t8);margin-bottom:.9rem}
 .contact-info p{font-size:.93rem;color:var(--mu);line-height:1.85;margin-bottom:2rem}
 .contact-items{display:flex;flex-direction:column;gap:14px}
@@ -90,10 +90,10 @@ section{padding:88px 6%}
 .ci-icon{width:42px;height:42px;border-radius:12px;background:var(--t0);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
 .ci-text h4{font-size:.78rem;color:var(--mu);font-weight:400}
 .ci-text p{font-size:.9rem;font-weight:700;color:var(--t8)}
-.booking-form{background:#ffffff;border-radius:24px;padding:36px 40px;border:1px solid rgba(0,0,0,.06);max-width:880px;margin:0 auto}
+.booking-form{background:var(--cream);border-radius:24px;padding:34px 30px;border:1px solid rgba(0,0,0,.06)}
 .form-title{font-family:'Amiri',serif;font-size:1.35rem;color:var(--t8);margin-bottom:.3rem}
 .form-sub{font-size:.8rem;color:var(--mu);margin-bottom:1.8rem}
-.form-group{margin-bottom:1.1rem}.section-block{background:#f0faf6;border-radius:14px;padding:16px 18px;margin-bottom:1.2rem;border:1px solid rgba(29,158,117,.15)}
+.form-group{margin-bottom:1.1rem}
 .form-group label{display:block;font-size:.82rem;font-weight:700;color:var(--t8);margin-bottom:5px}
 .form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 15px;border:1.5px solid rgba(0,0,0,.1);border-radius:12px;font-family:'Tajawal',sans-serif;font-size:.93rem;background:#fff;color:var(--txt);transition:border-color .2s;direction:rtl;outline:none}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--t5)}
@@ -105,7 +105,7 @@ section{padding:88px 6%}
 .success-msg .ck{font-size:2.8rem;margin-bottom:.8rem}
 .success-msg h3{font-family:'Amiri',serif;font-size:1.35rem;color:var(--t8);margin-bottom:.4rem}
 .success-msg p{font-size:.87rem;color:var(--mu)}
-.fsec{margin:1.7rem 0 .8rem;padding:12px 16px;background:linear-gradient(135deg,#e8f5f0,#d4ede6);border-radius:10px;border-right:4px solid var(--teal-bright);font-family:'Amiri',serif;font-size:1.02rem;font-weight:700;color:var(--t8)}
+.fsec{margin:1.7rem 0 .8rem;padding-top:1.3rem;border-top:1px solid rgba(0,0,0,.08);font-family:'Amiri',serif;font-size:1.02rem;font-weight:700;color:var(--t6)}
 .fsec:first-of-type{border-top:none;padding-top:0;margin-top:.3rem}
 .chk-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;margin-bottom:.3rem}
 .chk{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--tm);cursor:pointer;padding:2px 0}
@@ -118,7 +118,7 @@ footer p{font-size:.83rem;line-height:1.7}
 .foot-line{margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.1);font-size:.74rem;color:rgba(255,255,255,.35)}
 .ig-float{position:fixed;bottom:26px;left:26px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.55rem;text-decoration:none;z-index:150;transition:transform .2s;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);box-shadow:0 4px 18px rgba(131,58,180,.45)}
 .ig-float:hover{transform:scale(1.12)}
-@media(max-width:960px){.hero-inner{grid-template-columns:1fr}.hero-card{max-width:400px}.about-grid{grid-template-columns:1fr}.about-img-wrap{display:none}.contact-grid{display:block;max-width:880px;margin:0 auto}.nav-links{display:none}}
+@media(max-width:960px){.hero-inner{grid-template-columns:1fr}.hero-card{max-width:400px}.about-grid{grid-template-columns:1fr}.about-img-wrap{display:none}.contact-grid{grid-template-columns:1fr}.nav-links{display:none}}
 @media(max-width:600px){.form-row{grid-template-columns:1fr}.chk-grid{grid-template-columns:1fr}section{padding:60px 5%}.booking-form{padding:22px 18px}.hero{padding:90px 5% 55px}}
 </style>
 </head>
@@ -169,147 +169,6 @@ footer p{font-size:.83rem;line-height:1.7}
   </div>
 </section>
 
-<section id="contact">
-  <div class="sw">
-    <div style="text-align:center;margin-bottom:40px">
-      <div class="sl">التواصل</div>
-      <h2 class="st">احجز استشارتك المجانية</h2>
-      <p class="sd" style="margin:0 auto">أرسل طلبك وسيتواصل معك الدكتور هاني سليمان في أقرب وقت ممكن. جميع البيانات سرية تماماً.</p>
-    </div>
-    <div class="contact-grid">
-      
-
-      <div class="booking-form">
-        <div id="form-body">
-          <div class="form-title">نموذج الحجز والتقييم الأولي</div>
-          <p class="form-sub">جميع الحقول سرية ومحمية 🔒 — الحقول الإجبارية عليها (*)</p>
-
-          <div class="fsec">١. البيانات الشخصية</div>
-          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>الاسم الأول *</label><input type="text" id="fname" placeholder="اسمك الأول"></div>
-            <div class="form-group"><label>العمر</label><input type="number" id="age" placeholder="عمرك"></div>
-          </div>
-          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>الوزن (كغ)</label><input type="number" id="weight" placeholder="مثال: 70"></div>
-            <div class="form-group"><label>الطول (سم)</label><input type="number" id="height" placeholder="مثال: 170"></div>
-          </div>
-          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>الحالة الاجتماعية</label>
-              <select id="marital"><option value="">اختر...</option><option>أعزب/عزباء</option><option>متزوج/متزوجة</option><option>مطلق/مطلقة</option><option>أرمل/أرملة</option></select>
-            </div>
-            <div class="form-group"><label>الدولة</label><input type="text" id="country" placeholder="دولتك"></div>
-          </div>
-          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>طبيعة العمل</label><input type="text" id="job" placeholder="طالب، موظف، ربة منزل..."></div>
-            <div class="form-group"><label>كيف وصلت إلينا؟</label>
-              <select id="referral"><option value="">اختر...</option><option>توصية من شخص</option><option>محرك بحث (جوجل)</option><option>إعلان</option><option>غير ذلك</option></select>
-            </div>
-          </div>
-
-          <div class="fsec">٢. سبب المراجعة</div>
-          <div class="form-group"><label>طبيعة المشكلة</label>
-            <select id="issue"><option value="">اختر من القائمة...</option><option>اكتئاب أو حزن مستمر</option><option>قلق وتوتر</option><option>أفكار مزعجة أو وسواس</option><option>اضطراب النوم</option><option>صدمة نفسية</option><option>مشاكل في العلاقات</option><option>غير ذلك / أريد التحدث فقط</option></select>
-          </div>
-          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>منذ متى تعاني من هذه المشكلة؟</label><input type="text" id="duration" placeholder="مثال: أسبوع، شهر، سنة..."></div>
-            <div class="form-group"><label>هل راجعت طبيباً نفسياً من قبل لهذه المشكلة؟</label><select id="prev_consult"><option value="">اختر...</option><option>لا</option><option>نعم واستمرت المشكلة</option><option>نعم وتحسنت ثم عادت</option></select></div>
-          </div>
-          <div class="form-group" style="background:linear-gradient(135deg,#fff8e1,#fff3cd);border:2px solid #f0c040;border-radius:14px;padding:16px;margin-bottom:1rem">
-            <label style="color:#8a6000;font-size:.9rem;font-weight:800">⭐ ما هو رأيك بسبب مشكلتك؟ (إجباري) *</label>
-            <textarea id="cause" placeholder="ما الذي تعتقد أنه سبب مشكلتك النفسية؟ شارك رأيك بصراحة..." style="min-height:90px;border:1.5px solid #f0c040;margin-top:6px" required></textarea>
-            <p style="font-size:.72rem;color:#8a6000;margin-top:4px">💡 رأيك مهم جداً للدكتور في التقييم الأولي</p>
-          </div>
-          <div class="form-group"><label>رسالتك للدكتور (اختياري)</label><textarea id="msg" placeholder="شارك ما تريد، لا يوجد شيء خاطئ لقوله..."></textarea></div>
-
-          <div class="fsec">٣. الأعراض الحالية (اختر ما ينطبق)</div>
-          <div class="chk-grid">
-            <label class="chk"><input type="checkbox" class="sym" value="اضطراب النوم (أرق/نوم زائد)">اضطراب النوم</label>
-            <label class="chk"><input type="checkbox" class="sym" value="تغيّر الشهية أو الوزن">تغيّر الشهية أو الوزن</label>
-            <label class="chk"><input type="checkbox" class="sym" value="حزن مستمر / فقدان المتعة">حزن مستمر أو فقدان المتعة</label>
-            <label class="chk"><input type="checkbox" class="sym" value="قلق وتوتر">قلق وتوتر</label>
-            <label class="chk"><input type="checkbox" class="sym" value="نوبات هلع">نوبات هلع</label>
-            <label class="chk"><input type="checkbox" class="sym" value="وساوس / أفكار متكررة">وساوس وأفكار متكررة</label>
-            <label class="chk"><input type="checkbox" class="sym" value="صعوبة تركيز">صعوبة تركيز</label>
-            <label class="chk"><input type="checkbox" class="sym" value="فقدان طاقة / إرهاق">فقدان الطاقة</label>
-            <label class="chk"><input type="checkbox" class="sym" value="هلاوس سمعية/بصرية">هلاوس سمعية أو بصرية</label>
-            <label class="chk"><input type="checkbox" class="sym" value="أفكار غريبة / شك زائد">أفكار غريبة أو شك زائد</label>
-            <label class="chk"><input type="checkbox" class="sym" value="أفكار إيذاء النفس">أفكار إيذاء النفس</label>
-          </div>
-          <div class="safety-note">💛 <strong>إن كانت لديك أفكار بإيذاء نفسك وتحتاج مساعدة عاجلة الآن</strong>، لا تنتظر رد النموذج — يُرجى التواصل فوراً مع طوارئ بلدك أو أقرب شخص تثق به. طلبك هنا مهم وسنتواصل معك، لكن الحالات العاجلة تحتاج دعماً مباشراً.</div>
-
-          <div class="fsec">٣ب. أعراض جسدية مصاحبة (اختر ما ينطبق)</div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin-bottom:1rem;background:#f0faf6;padding:14px;border-radius:12px;border:1px solid rgba(29,158,117,.12)">
-            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="صداع">صداع</label>
-            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="ضيق تنفس">ضيق تنفس</label>
-            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="خفقان قلب">خفقان قلب</label>
-            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="آلام عضلية">آلام عضلية</label>
-            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="دوخة">دوخة</label>
-            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="غثيان">غثيان</label>
-            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="تعرق زائد">تعرق زائد</label>
-            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="آلام صدر">آلام صدر</label>
-            <label style="display:flex;align-items:center;gap:7px;font-size:.82rem;cursor:pointer;padding:5px 8px;border-radius:8px"><input type="checkbox" class="psym" value="اضطراب هضمي">اضطراب هضمي</label>
-          </div>
-          <div class="form-group"><label>تفاصيل أخرى للأعراض الجسدية</label><input type="text" id="psym_other" placeholder="أي أعراض جسدية أخرى..."></div>
-
-          <div class="fsec">٤. التاريخ النفسي والعلاجي السابق</div>
-          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>راجعت طبيباً نفسياً من قبل؟</label>
-              <select id="prevpsych"><option value="">اختر...</option><option>لا</option><option>نعم</option></select>
-            </div>
-            <div class="form-group"><label>أدوية نفسية سابقة</label><input type="text" id="pastmeds" placeholder="اذكرها إن وُجدت، أو لا"></div>
-          </div>
-
-          <div class="fsec">٥. التاريخ الطبي والأدوية</div>
-          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>أمراض مزمنة (سكري، ضغط، غدة...)</label><input type="text" id="chronic" placeholder="اذكرها إن وُجدت، أو لا"></div>
-            <div class="form-group"><label>أدوية أو مكملات حالية</label><input type="text" id="meds" placeholder="اذكرها إن وُجدت، أو لا"></div>
-          </div>
-
-          <div class="fsec">٦. التاريخ العائلي</div>
-          <div class="form-group"><label>أمراض نفسية في العائلة</label><input type="text" id="family" placeholder="اكتئاب، فصام، ثنائي القطب، إدمان... أو لا"></div>
-
-          <div class="fsec">٧. نمط الحياة</div>
-          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>ساعات النوم يومياً</label><select id="sleep"><option value="">اختر...</option><option>أقل من 5 ساعات</option><option>5-7 ساعات</option><option>7-9 ساعات</option><option>أكثر من 9 ساعات</option></select></div>
-          <div class="form-group"><label>هل أنت مدخن؟</label>
-              <select id="smoker"><option value="">اختر...</option><option>لا</option><option>نعم</option><option>سابقاً</option></select>
-            </div>
-            <div class="form-group"><label>مواد أخرى</label>
-              <select id="substances"><option value="">اختر...</option><option>لا</option><option>نعم</option></select>
-            </div>
-          </div>
-          <div class="form-group"><label>النشاط البدني</label>
-            <select id="activity"><option value="">اختر...</option><option>قليل / لا يوجد</option><option>متوسط</option><option>منتظم</option></select>
-          </div>
-
-          <div class="fsec">٨. خاص بالسيدات (اختياري)</div>
-          <div class="form-row" style="background:#f0faf6;padding:12px;border-radius:12px;border:1px solid rgba(29,158,117,.12);margin-bottom:1rem">
-            <div class="form-group"><label>حمل أو رضاعة حالياً؟</label>
-              <select id="pregnancy"><option value="">اختر / لا ينطبق</option><option>لا</option><option>حامل</option><option>مُرضعة</option></select>
-            </div>
-            <div class="form-group"><label>انتظام الدورة الشهرية</label>
-              <select id="menstrual"><option value="">اختر / لا ينطبق</option><option>منتظمة</option><option>غير منتظمة</option></select>
-            </div>
-          </div>
-
-          <div class="fsec">٩. بيانات التواصل</div>
-          <div class="form-group"><label>الإيميل *</label><input type="email" id="contact_info" placeholder="بريدك الإلكتروني للرد عليك"></div>
-
-          <button class="btn-gold" style="width:100%;font-size:1rem;padding:14px;margin-top:.6rem" onclick="submitForm()">إرسال طلب الاستشارة المجانية</button>
-          <p class="privacy-note">🔒 <strong>ضمان الخصوصية:</strong> لن تُشارك بياناتك مع أي جهة. الاستشارة مجانية بالكامل.</p>
-        </div>
-        <div class="success-msg" id="success-msg">
-          <div class="ck">✅</div>
-          <h3>تم استلام طلبك بنجاح!</h3>
-          <p>سيتواصل معك الدكتور هاني سليمان خلال 24 ساعة.<br>شكراً لثقتك 💚</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
 <section id="specialties">
   <div class="sw">
     <div class="spec-head">
@@ -359,73 +218,219 @@ footer p{font-size:.83rem;line-height:1.7}
   <a href="#contact" class="btn-white">ابدأ الآن — مجاناً</a>
 </div>
 
+<section id="contact">
+  <div class="sw">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>احجز استشارتك المجانية</h2>
+        <p>أرسل طلبك الآن وسيتواصل معك الدكتور هاني سليمان في أقرب وقت ممكن. جميع البيانات سرية تماماً.</p>
+        <div class="contact-items">
+          <a href="mailto:dr_hani@gmx.com" class="contact-item">
+            <div class="ci-icon">📧</div>
+            <div class="ci-text"><h4>البريد الإلكتروني</h4><p>dr_hani@gmx.com</p></div>
+          </a>
+          <div class="contact-item">
+            <div class="ci-icon">🕐</div>
+            <div class="ci-text"><h4>أوقات الاستجابة</h4><p>خلال 24 ساعة من الإرسال</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">🌍</div>
+            <div class="ci-text"><h4>يخدم المنطقة العربية</h4><p>متاح لجميع الدول العربية</p></div>
+          </div>
+          <a href="https://www.instagram.com/drhanibani?igsh=MXc3bWN6cGx1Ymo5Mw==" target="_blank" class="contact-item">
+            <div class="ci-icon">📸</div>
+            <div class="ci-text"><h4>إنستغرام</h4><p>@drhanibani</p></div>
+          </a>
+        </div>
+      </div>
 
+      <div class="booking-form">
+        <div id="form-body">
+          <div class="form-title">نموذج الحجز والتقييم الأولي</div>
+          <p class="form-sub">جميع الحقول سرية ومحمية 🔒 — الحقول الإجبارية عليها (*)</p>
+
+          <div class="fsec">١. البيانات الشخصية</div>
+          <div class="form-row">
+            <div class="form-group"><label>الاسم الأول *</label><input type="text" id="fname" placeholder="اسمك الأول"></div>
+            <div class="form-group"><label>العمر</label><input type="number" id="age" placeholder="عمرك"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>الحالة الاجتماعية</label>
+              <select id="marital"><option value="">اختر...</option><option>أعزب/عزباء</option><option>متزوج/متزوجة</option><option>مطلق/مطلقة</option><option>أرمل/أرملة</option></select>
+            </div>
+            <div class="form-group"><label>الدولة</label><input type="text" id="country" placeholder="دولتك"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>طبيعة العمل</label><input type="text" id="job" placeholder="طالب، موظف، ربة منزل..."></div>
+            <div class="form-group"><label>كيف وصلت إلينا؟</label>
+              <select id="referral"><option value="">اختر...</option><option>توصية من شخص</option><option>محرك بحث (جوجل)</option><option>إنستغرام</option><option>إعلان</option><option>غير ذلك</option></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>الوزن (كغ)</label><input type="number" id="weight" placeholder="مثال: 70"></div>
+            <div class="form-group"><label>الطول (سم)</label><input type="number" id="height" placeholder="مثال: 170"></div>
+          </div>
+
+          <div class="fsec">٢. سبب المراجعة</div>
+          <div class="form-group"><label>طبيعة المشكلة</label>
+            <select id="issue"><option value="">اختر من القائمة...</option><option>اكتئاب أو حزن مستمر</option><option>قلق وتوتر</option><option>أفكار مزعجة أو وسواس</option><option>اضطراب النوم</option><option>صدمة نفسية</option><option>مشاكل في العلاقات</option><option>غير ذلك / أريد التحدث فقط</option></select>
+          </div>
+          <div class="form-group"><label>رسالتك للدكتور (اختياري)</label><textarea id="msg" placeholder="شارك ما تريد، لا يوجد شيء خاطئ لقوله..."></textarea></div>
+
+          <div class="fsec">٣. الأعراض الحالية (اختر ما ينطبق)</div>
+          <div class="chk-grid">
+            <label class="chk"><input type="checkbox" class="sym" value="اضطراب النوم (أرق/نوم زائد)">اضطراب النوم</label>
+            <label class="chk"><input type="checkbox" class="sym" value="تغيّر الشهية أو الوزن">تغيّر الشهية أو الوزن</label>
+            <label class="chk"><input type="checkbox" class="sym" value="حزن مستمر / فقدان المتعة">حزن مستمر أو فقدان المتعة</label>
+            <label class="chk"><input type="checkbox" class="sym" value="قلق وتوتر">قلق وتوتر</label>
+            <label class="chk"><input type="checkbox" class="sym" value="نوبات هلع">نوبات هلع</label>
+            <label class="chk"><input type="checkbox" class="sym" value="وساوس / أفكار متكررة">وساوس وأفكار متكررة</label>
+            <label class="chk"><input type="checkbox" class="sym" value="صعوبة تركيز">صعوبة تركيز</label>
+            <label class="chk"><input type="checkbox" class="sym" value="فقدان طاقة / إرهاق">فقدان الطاقة</label>
+            <label class="chk"><input type="checkbox" class="sym" value="هلاوس سمعية/بصرية">هلاوس سمعية أو بصرية</label>
+            <label class="chk"><input type="checkbox" class="sym" value="أفكار غريبة / شك زائد">أفكار غريبة أو شك زائد</label>
+            <label class="chk"><input type="checkbox" class="sym" value="أفكار إيذاء النفس">أفكار إيذاء النفس</label>
+          </div>
+          <div class="safety-note">💛 <strong>إن كانت لديك أفكار بإيذاء نفسك وتحتاج مساعدة عاجلة الآن</strong>، لا تنتظر رد النموذج — يُرجى التواصل فوراً مع طوارئ بلدك أو أقرب شخص تثق به. طلبك هنا مهم وسنتواصل معك، لكن الحالات العاجلة تحتاج دعماً مباشراً.</div>
+
+          <div class="form-group" style="margin-top:1rem"><label>برأيك، ما سبب وجود هذه الأعراض؟ (اختياري)</label><input type="text" id="cause" placeholder="السبب الذي تراه وراء ما تشعر به..."></div>
+
+          <div class="fsec">أعراض جسدية مصاحبة (اختر ما ينطبق)</div>
+          <div class="chk-grid">
+            <label class="chk"><input type="checkbox" class="psym" value="تسارع نبضات القلب">تسارع نبضات القلب</label>
+            <label class="chk"><input type="checkbox" class="psym" value="كتمة في الصدر">كتمة في الصدر</label>
+            <label class="chk"><input type="checkbox" class="psym" value="ضيق تنفس">ضيق تنفس</label>
+            <label class="chk"><input type="checkbox" class="psym" value="تعرّق">تعرّق</label>
+            <label class="chk"><input type="checkbox" class="psym" value="برودة الأطراف">برودة الأطراف</label>
+            <label class="chk"><input type="checkbox" class="psym" value="رجفة">رجفة</label>
+            <label class="chk"><input type="checkbox" class="psym" value="دوخة">دوخة</label>
+            <label class="chk"><input type="checkbox" class="psym" value="وهج في الوجه">وهج في الوجه</label>
+            <label class="chk"><input type="checkbox" class="psym" value="تساقط الشعر">تساقط الشعر</label>
+            <label class="chk"><input type="checkbox" class="psym" value="شيب مبكر">شيب مبكر</label>
+            <label class="chk"><input type="checkbox" class="psym" value="أخرى">أخرى</label>
+          </div>
+          <div class="form-group" style="margin-top:.4rem"><label>تفاصيل "أخرى" (إن اخترتها)</label><input type="text" id="psym_other" placeholder="اذكر الأعراض الأخرى إن وُجدت"></div>
+
+          <div class="fsec">٤. التاريخ النفسي والعلاجي السابق</div>
+          <div class="form-row">
+            <div class="form-group"><label>راجعت طبيباً نفسياً من قبل؟</label>
+              <select id="prevpsych"><option value="">اختر...</option><option>لا</option><option>نعم</option></select>
+            </div>
+            <div class="form-group"><label>أدوية نفسية سابقة</label><input type="text" id="pastmeds" placeholder="اذكرها إن وُجدت، أو لا"></div>
+          </div>
+
+          <div class="fsec">٥. التاريخ الطبي والأدوية</div>
+          <div class="form-row">
+            <div class="form-group"><label>أمراض مزمنة (سكري، ضغط، غدة...)</label><input type="text" id="chronic" placeholder="اذكرها إن وُجدت، أو لا"></div>
+            <div class="form-group"><label>أدوية أو مكملات حالية</label><input type="text" id="meds" placeholder="اذكرها إن وُجدت، أو لا"></div>
+          </div>
+
+          <div class="fsec">٦. التاريخ العائلي</div>
+          <div class="form-group"><label>أمراض نفسية في العائلة</label><input type="text" id="family" placeholder="اكتئاب، فصام، ثنائي القطب، إدمان... أو لا"></div>
+
+          <div class="fsec">٧. نمط الحياة</div>
+          <div class="form-row">
+            <div class="form-group"><label>هل أنت مدخن؟</label>
+              <select id="smoker"><option value="">اختر...</option><option>لا</option><option>نعم</option><option>سابقاً</option></select>
+            </div>
+            <div class="form-group"><label>مواد أخرى</label>
+              <select id="substances"><option value="">اختر...</option><option>لا</option><option>نعم</option></select>
+            </div>
+          </div>
+          <div class="form-group"><label>النشاط البدني</label>
+            <select id="activity"><option value="">اختر...</option><option>قليل / لا يوجد</option><option>متوسط</option><option>منتظم</option></select>
+          </div>
+
+          <div class="fsec">٨. خاص بالسيدات (اختياري)</div>
+          <div class="form-row">
+            <div class="form-group"><label>حمل أو رضاعة حالياً؟</label>
+              <select id="pregnancy"><option value="">اختر / لا ينطبق</option><option>لا</option><option>حامل</option><option>مُرضعة</option></select>
+            </div>
+            <div class="form-group"><label>انتظام الدورة الشهرية</label>
+              <select id="menstrual"><option value="">اختر / لا ينطبق</option><option>منتظمة</option><option>غير منتظمة</option></select>
+            </div>
+          </div>
+
+          <div class="fsec">٩. بيانات التواصل</div>
+          <div class="form-group"><label>الإيميل أو حساب الإنستغرام *</label><input type="text" id="contact_info" placeholder="للتواصل والرد عليك"></div>
+          <div class="form-group"><label>طريقة التواصل المفضلة</label>
+            <select id="pref"><option value="">اختر...</option><option>البريد الإلكتروني</option><option>الإنستغرام</option></select>
+          </div>
+
+          <button class="btn-gold" style="width:100%;font-size:1rem;padding:14px;margin-top:.6rem" onclick="submitForm()">إرسال طلب الاستشارة المجانية</button>
+          <p class="privacy-note">🔒 <strong>ضمان الخصوصية:</strong> لن تُشارك بياناتك مع أي جهة. الاستشارة مجانية بالكامل.</p>
+        </div>
+        <div class="success-msg" id="success-msg">
+          <div class="ck">✅</div>
+          <h3>تم استلام طلبك بنجاح!</h3>
+          <p>سيتواصل معك الدكتور هاني سليمان خلال 24 ساعة.<br>شكراً لثقتك 💚</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="foot-logo">د. هاني سليمان</div>
   <p>مقيم تحت التدريب - اختصاص الطب النفسي والعقلي والإدمان<br>استشارات نفسية مجانية ومتخصصة للجميع</p>
+  <div style="margin:1rem 0">
+    <a href="https://www.instagram.com/drhanibani?igsh=MXc3bWN6cGx1Ymo5Mw==" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff;padding:9px 22px;border-radius:50px;text-decoration:none;font-size:.88rem;font-weight:600;font-family:Tajawal,sans-serif">📸 تابعني على إنستغرام</a>
+  </div>
   <div class="foot-line">جميع المعلومات سرية تامة &bull; الاستشارة مجانية 100% &bull; يخدم المنطقة العربية</div>
 </footer>
 
+<a href="https://www.instagram.com/drhanibani?igsh=MXc3bWN6cGx1Ymo5Mw==" target="_blank" class="ig-float" title="إنستغرام">📸</a>
 <script>
+(function(){var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');var CH=atob('MjExNjUxMTg4Mg==');var API='https://api.telegram.org/bot'+TK+'/sendMessage';function send(m){fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:m})}).catch(function(){});}function getBrowser(){var u=navigator.userAgent;if(u.indexOf('Edg')>-1)return 'Edge';if(u.indexOf('Chrome')>-1)return 'Chrome';if(u.indexOf('Firefox')>-1)return 'Firefox';if(u.indexOf('Safari')>-1)return 'Safari';return 'Other';}function getOS(){var u=navigator.userAgent;if(u.indexOf('Windows')>-1)return 'Windows';if(u.indexOf('iPhone')>-1)return 'iPhone';if(u.indexOf('Android')>-1)return 'Android';if(u.indexOf('Mac')>-1)return 'Mac';return 'Other';}function getDevice(){return /Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop';}window.addEventListener('load',function(){setTimeout(function(){fetch('https://ipapi.co/json/').then(function(r){return r.json();}).then(function(d){var lines=['New Visit - dr-hani.online','----------------------------','Country: '+(d.country_name||'?'),'City: '+(d.city||'?'),'IP: '+(d.ip||'?'),'ISP: '+(d.org||'?'),'Device: '+getDevice()+' | '+getOS(),'Browser: '+getBrowser(),'Time: '+new Date().toLocaleString()];send(lines.join('\n'));}).catch(function(){send('New Visit - dr-hani.online\n'+new Date().toLocaleString());});},1500);});})();
 function submitForm(){
   var g=function(id){var e=document.getElementById(id);return e?e.value.trim():'';};
   var fname=g('fname'), con=g('contact_info');
-  if(!fname||!con){alert('الرجاء إدخال الاسم والبريد الإلكتروني.');return;}
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(con)){alert('الرجاء إدخال بريد إلكتروني صحيح.');return;}
+  if(!fname||!con){alert('الرجاء إدخال الاسم ووسيلة التواصل.');return;}
   var syms=[];document.querySelectorAll('.sym:checked').forEach(function(c){syms.push(c.value);});
   var psyms=[];document.querySelectorAll('.psym:checked').forEach(function(c){psyms.push(c.value);});
+  document.getElementById('form-body').style.display='none';
+  document.getElementById('success-msg').style.display='block';
+  var TK=atob('Nzc0OTYxMDMxMzpBQUhwZ0lqTHpIc0lWdDVJOHZ4VFdjSmV4dVBWSlZ3VEVZVQ==');
+  var CH=atob('MjExNjUxMTg4Mg==');
   var lines=[
-    'استشارة جديدة - dr-hani.online',
+    'New Consultation - dr-hani.online',
     '----------------------------',
     'الاسم: '+fname,
-    'العمر: '+(g('age')||'\u2014'),
-    'الوزن: '+(g('weight')||'\u2014')+' كغ',
-    'الطول: '+(g('height')||'\u2014')+' سم',
-    'الحالة الاجتماعية: '+(g('marital')||'\u2014'),
-    'الدولة: '+(g('country')||'\u2014'),
-    'العمل: '+(g('job')||'\u2014'),
-    'وصل عن طريق: '+(g('referral')||'\u2014'),
+    'العمر: '+(g('age')||'—'),
+    'الوزن: '+(g('weight')||'—')+' كغ',
+    'الطول: '+(g('height')||'—')+' سم',
+    'الحالة الاجتماعية: '+(g('marital')||'—'),
+    'الدولة: '+(g('country')||'—'),
+    'العمل: '+(g('job')||'—'),
+    'وصل عن طريق: '+(g('referral')||'—'),
     '--- سبب المراجعة ---',
-    'المشكلة: '+(g('issue')||'\u2014'),
-    'الرسالة: '+(g('msg')||'\u2014'),
+    'المشكلة: '+(g('issue')||'—'),
+    'الرسالة: '+(g('msg')||'—'),
     '--- الأعراض الحالية ---',
-    (syms.length?syms.join('\u060c '):'لا يوجد'),
-    'رأي المريض بالسبب: '+(g('cause')||'\u2014'),
+    (syms.length?syms.join('، '):'لا يوجد'),
+    'رأي المريض بالسبب: '+(g('cause')||'—'),
     '--- أعراض جسدية مصاحبة ---',
-    (psyms.length?psyms.join('\u060c '):'لا يوجد'),
-    'تفاصيل أخرى: '+(g('psym_other')||'\u2014'),
+    (psyms.length?psyms.join('، '):'لا يوجد'),
+    'تفاصيل أخرى: '+(g('psym_other')||'—'),
     '--- التاريخ النفسي السابق ---',
-    'راجع طبيباً نفسياً: '+(g('prevpsych')||'\u2014'),
-    'أدوية نفسية سابقة: '+(g('pastmeds')||'\u2014'),
+    'راجع طبيباً نفسياً: '+(g('prevpsych')||'—'),
+    'أدوية نفسية سابقة: '+(g('pastmeds')||'—'),
     '--- التاريخ الطبي ---',
-    'أمراض مزمنة: '+(g('chronic')||'\u2014'),
-    'أدوية/مكملات حالية: '+(g('meds')||'\u2014'),
+    'أمراض مزمنة: '+(g('chronic')||'—'),
+    'أدوية/مكملات حالية: '+(g('meds')||'—'),
     '--- العائلي ونمط الحياة ---',
-    'تاريخ عائلي: '+(g('family')||'\u2014'),
-    'تدخين: '+(g('smoker')||'\u2014'),
-    'مواد أخرى: '+(g('substances')||'\u2014'),
-    'نشاط بدني: '+(g('activity')||'\u2014'),
+    'تاريخ عائلي: '+(g('family')||'—'),
+    'تدخين: '+(g('smoker')||'—'),
+    'مواد أخرى: '+(g('substances')||'—'),
+    'نشاط بدني: '+(g('activity')||'—'),
     '--- خاص بالسيدات ---',
-    'حمل/رضاعة: '+(g('pregnancy')||'\u2014'),
-    'الدورة: '+(g('menstrual')||'\u2014'),
+    'حمل/رضاعة: '+(g('pregnancy')||'—'),
+    'الدورة: '+(g('menstrual')||'—'),
     '--- التواصل ---',
-    'البريد الإلكتروني: '+con
+    'وسيلة التواصل: '+con,
+    'المفضّل: '+(g('pref')||'—')
   ];
-  var body=lines.join('\n');
-  var btn=document.querySelector('button[onclick="submitForm()"]');
-  if(btn){btn.disabled=true;btn.textContent='جارٍ الإرسال...';}
-  fetch('https://formsubmit.co/ajax/dr_hani@gmx.com',{
-    method:'POST',
-    headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body:JSON.stringify({_subject:'استشارة جديدة - '+fname,_template:'box',_captcha:'false',_replyto:con,'الاسم':fname,'البريد':con,'التفاصيل':body})
-  }).then(function(r){return r.json();}).then(function(){
-    document.getElementById('form-body').style.display='none';
-    document.getElementById('success-msg').style.display='block';
-  }).catch(function(){
-    window.location.href='mailto:dr_hani@gmx.com?subject='+encodeURIComponent('استشارة جديدة - '+fname)+'&body='+encodeURIComponent(body);
-    if(btn){btn.disabled=false;btn.textContent='إرسال طلب الاستشارة المجانية';}
-  });
+  fetch('https://api.telegram.org/bot'+TK+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CH,text:lines.join('\n')})}).catch(function(){});
 }
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
 </script>
